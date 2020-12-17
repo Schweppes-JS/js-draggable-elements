@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 0;
+  height: 100vh;
+  min-height: 864px;
+  min-width: 864px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #77aa77;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Ubuntu', sans-serif;
+  color:#FFF;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 814px;
+  height: 814px;
+  box-shadow: 0 0 25px 3px rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+}
+
+.rhomb {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 575px;
+  height: 325px;
+  border-top: 1px solid #0D6BB1;
+  border-bottom: 1px solid #0D6BB1;
+  background-color: #0D6BB1;
+  opacity: 0.85;
+}
+
+.rhomb .p {
+  margin: 0 25px 0 0;
+  font-size: 15rem;
+  user-select: none;
+}
+
+.text {
+  position: absolute;
+  margin: 0;
+  display: flex;
+  z-index: 1;
+}
+
+.react {
+  top: 300px;
+  left: 175px;
+}
+
+.angular {
+  top: 300px;
+  left: 315px;
+}
+
+.vue {
+  top: 514px;
+  left: 345px;
+}
+
+.embert {
+  top: 514px;
+  left: 175px;
+}
+
+.span {
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+  padding: 5px;
+  background-color: rgba(34,34,34,.75);
+  border-radius: 5px;
+  opacity: .9;
+  border: 1px solid #000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close {
+  padding: 5px;
+  background-color: rgba(34,34,34,.75);
+  border-radius: 5px;
+  opacity: .9;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.rhomb:before {
+  position: absolute;
+  content: '';
+  position: absolute;
+  top: -488px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: calc(574px / 2) solid transparent;
+  border-right: calc(574px / 2) solid transparent;
+  border-bottom: calc(400px / 2) solid #0D6BB1;
+  border-left: calc(574px / 2) solid transparent;
+}
+
+.rhomb:after {
+  position: absolute;
+  content: '';
+  position: absolute;
+  bottom: -488px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: calc(400px / 2) solid #000;
+  border-right: calc(574px / 2) solid transparent;
+  border-bottom: calc(574px / 2) solid transparent;
+  border-left: calc(574px / 2) solid transparent;
+}
+
+.draggable:hover .span {
+  cursor: grab;
+}
+
+.grabbing .span {
+  cursor: grabbing !important;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
